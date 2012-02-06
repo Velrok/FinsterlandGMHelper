@@ -5,9 +5,32 @@
 		<script type="text/javascript" src="./js/CharRepository.js" charset="utf-8"></script>
 			
 			<script type="text/javascript" charset="utf-8">
+			
+			var charPool = loadAllChars();
+			
+			var l = function(msg){
+				console.log(msg);
+			}
+			
+			var charToUlSting = function(c){
+				return "<li>" + c.name + "</li>\n";
+			}
+			
+			var displayChars = function (chars){
+				$(chars).each(function(index, c){
+					var ul = $('#char_pool ul');
+					ul.html(ul.html() + "<li>"+c.name+"</li>");
+				});
+			}
+			
 			var init = function(){
-				
+				displayChars(charPool);
 			};
+			
+			var show = function(id){
+				$('#content div').addClass('hidden');
+				$(id).removeClass('hidden');
+			}
 		
 			$(document).ready(function(){
 				init();
@@ -18,6 +41,9 @@
 		</style>
 		
 		<style type="text/css" >
+			.hidden {
+				display: none;
+			}
 		</style>
 	</head>
 	
@@ -26,19 +52,23 @@
 		<div id="page">
 			<h1>Finsterland GM Helper</h1>
 			<div id="menue">
-				<span>Main</span>
-				<span>CharPool</span>
+				<span onclick="show('#char_pool')">CharPool</span>
+				<span onclick="show('#edit_party')">Party</span>
 			</div>
 			
 			<div id="content">
 				
-				<div id="active_characters">
+				<div id="char_pool">
 					<h2>Charaktere</h2>
 					<ul>
-						<li>Waldemar</li>
-						<li>Dimi</li>
 					</ul>
-				</div> <!-- active_characters -->
+				</div> <!-- char_pool -->
+				
+				<div id="edit_party" class="hidden">
+					<h2>Party</h2>
+					<ul>
+					</ul>
+				</div> <!-- char_pool -->
 				
 				<div class="clear_float"></div>
 				
