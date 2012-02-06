@@ -7,9 +7,6 @@ Finsterland GM Helper is a html / javascript based webapplication for a pen and 
 
 Copyright (c) 2012 Waldemar Schwan
 
-This software is dual licensed under: 
+This software is licensed under the [MIT license](http://www.opensource.org/licenses/MIT) for **non commercial usage only**.
 
- - [MIT license](http://www.opensource.org/licenses/MIT) for non commercial usage
- - [GPL license](https://www.gnu.org/licenses/gpl.txt) for commercial usage.
-
-If you want to use this software in a commercial project under another license contact me at <waldemar.schwan+license@googlemail.com>.
+If you want to use this software in a commercial project please contact me at <waldemar.schwan+license@googlemail.com>.
